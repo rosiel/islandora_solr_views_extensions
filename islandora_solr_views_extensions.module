@@ -1,0 +1,12 @@
+<?php
+/**
+ * @file
+ * Module file for Islandora Solr Views Extensions.
+ */
+
+/**
+ * Implements hook_views_api().
+ */
+function islandora_solr_views_extensions_views_api() {
+  return array('api' => 3);
+}

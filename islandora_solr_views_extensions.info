@@ -1,0 +1,9 @@
+name = Islandora Solr Views Extensions
+description = Add a few more islandora things as views fields.
+dependencies[] = islandora
+dependencies[] = islandora_solr_views
+package = Islandora Search
+core = 7.x
+files[] = handlers/islandora_sve_audio_player.inc
+files[] = handlers/islandora_sve_views_handler_field.inc
+files[] = handlers/islandora_sve_views_handler_field_manage.inc
