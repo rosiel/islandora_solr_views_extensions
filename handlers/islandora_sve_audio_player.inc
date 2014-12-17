@@ -19,10 +19,6 @@ class IslandoraEthnographyHandlerAudioPlayer extends views_handler_field {
     $pid = $values->PID;
     $object = islandora_object_load($pid);
 
-    if (!in_array('islandora:sp-audioCModel', $object->models)) {
-      return NULL;
-    }
-
     if ($object['PROXY_MP3']) {
       $audio_link = '/islandora/object/' . $object->id . '/datastream/PROXY_MP3';
       $mime = $object['PROXY_MP3']->mimetype;
