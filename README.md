@@ -15,7 +15,7 @@ Install as usual, see [this](https://drupal.org/documentation/install/modules-th
 ## Configuration
 
 If you install this module, you will have a "field" available for display in an islandora solr view, called 
-Audio Datastream Player, which will render an audio tag if the object is an islandora:sp-audioCModel object.
+Audio Datastream Player, which will render an audio tag if the object has an audio PROXY_MP3 or OBJ datastream.
 
 ## License
 
