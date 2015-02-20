@@ -54,7 +54,7 @@ class IslandoraEthnographyHandlerVideoPlayer extends views_handler_field {
       );
     }
     $vars['player_id'] = 'videojs-'. str_replace(':', '_', $pid);
-    $vars['posterimage_style'] = 'thumbnail';
+    $vars['posterimage_style'] = NULL;
     $vars['attributes'] = array(
       'width' => 640,
       'height' => 360,
