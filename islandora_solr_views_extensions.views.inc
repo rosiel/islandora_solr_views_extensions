@@ -15,4 +15,21 @@ function islandora_solr_views_extensions_views_data_alter(&$data) {
       'handler' => 'IslandoraEthnographyHandlerAudioPlayer',
     ),
   );
+  $data['islandora_solr']['video_MP4_stream_player'] = array(
+    'title' => 'Streaming Video Datastream Player',
+    'help' => 'Displays a player for a streaming video datastream in the object.',
+    'field' => array(
+      'handler' => 'IslandoraEthnographyHandlerVideoPlayer',
+    ),
+  );
+
+  // Include a dismax query parser filter (q).
+  $data['islandora_solr']['query_edismax'] = array(
+    'title' => t('Query Parser (eDisMax)'),
+    'help' => t('Query Parser field to perform EDisMax keyword searches.'),
+    'filter' => array(
+      'handler' => 'islandora_sve_views_handler_filter_query_edismax',
+    ),
+  );
+
 }
