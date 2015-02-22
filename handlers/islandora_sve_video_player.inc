@@ -26,10 +26,32 @@ class IslandoraEthnographyHandlerVideoPlayer extends views_handler_field {
 
     if ($object['PROXY_MP4']) {
       $source_url = $object['PROXY_MP4']->url;
-      $source_url = str_replace('http', 'rtmp', $source_url);
+
+      // Add RTMP source
+      $source_url_rtmp = str_replace('http', 'rtmp', $source_url);
       $vars['items'][] = array(
-        'uri' => $source_url,
+        'uri' => $source_url_rtmp,
         'filemime' => 'rtmp/mp4',
+      );
+      // Add Apple HLS source
+      $source_url_hls = $source_url . '/playlist.m3u8';
+      $vars['items'][] = array(
+        'uri' => $source_url_hls,
+        'filemime' => 'video/mp4',
+      );
+      // Add MPEG-DASH (not sure if affects anything?)
+      /*
+      $source_url_dash = $source_url . '/manifest.mpd';
+      $vars['items'][] = array(
+        'uri' => $source_url_dash,
+        'filemime' => 'video/mp4',
+      );
+      */
+      // Add Silverlight Microsoft Smooth Streaming source (?not sure if works?)
+      $source_url_mss = $source_url . '/Manifest';
+      $vars['items'][] = array(
+        'uri' => $source_url_mss,
+        'filemime' => 'application/x-silverlight-2',
       );
     }
     if ($object['OBJ']) {
