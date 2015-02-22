@@ -37,7 +37,7 @@ class IslandoraEthnographyHandlerVideoPlayer extends views_handler_field {
       $source_url_hls = $source_url . '/playlist.m3u8';
       $vars['items'][] = array(
         'uri' => $source_url_hls,
-        'filemime' => 'video/mp4',
+        'filemime' => 'application/vnd.apple.mpegurl',
       );
       // Add MPEG-DASH (not sure if affects anything?)
       /*
