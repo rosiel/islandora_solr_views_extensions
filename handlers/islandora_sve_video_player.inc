@@ -31,7 +31,7 @@ class IslandoraEthnographyHandlerVideoPlayer extends views_handler_field {
       $source_url_rtmp = str_replace('http', 'rtmp', $source_url);
       $vars['items'][] = array(
         'uri' => $source_url_rtmp,
-        'filemime' => 'video/mp4',
+        'filemime' => 'rtmp/mp4',
       );
       // Add Apple HLS source
       $source_url_hls = $source_url . '/playlist.m3u8';
