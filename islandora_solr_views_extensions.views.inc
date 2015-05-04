@@ -22,7 +22,13 @@ function islandora_solr_views_extensions_views_data_alter(&$data) {
       'handler' => 'IslandoraEthnographyHandlerVideoPlayer',
     ),
   );
-
+  $data['islandora_solr']['image_jpg_derivative'] = array(
+    'title' => 'Image : JPG derivative',
+    'help' => 'Returns the path (e.g. "/islandora/object/pid/datastream/JPG" to the medium sized jpg derivative from basic and large images.',
+    'field' => array(
+      'handler' => 'IslandoraEthnographyHandlerImageDerivative',
+    ),
+  );
   // Include a dismax query parser filter (q).
   $data['islandora_solr']['query_edismax'] = array(
     'title' => t('Query Parser (eDisMax)'),

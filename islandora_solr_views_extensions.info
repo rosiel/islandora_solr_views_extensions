@@ -6,6 +6,7 @@ package = Islandora Search
 core = 7.x
 files[] = handlers/islandora_sve_audio_player.inc
 files[] = handlers/islandora_sve_video_player.inc
+files[] = handlers/islandora_sve_image_derivative.inc
 files[] = handlers/islandora_sve_views_handler_field.inc
 files[] = handlers/islandora_sve_views_handler_field_manage.inc
 files[] = handlers/islandora_sve_views_handler_filter_query_edismax.inc
