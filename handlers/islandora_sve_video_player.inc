@@ -54,7 +54,7 @@ class IslandoraEthnographyHandlerVideoPlayer extends views_handler_field {
         'filemime' => 'application/x-silverlight-2',
       );
     }
-    if (FALSE && $object['OBJ']) {
+    if ($object['OBJ']) {
       if ($object['OBJ']->mimetype == 'video/mpeg' || $object['OBJ']->mimetype == 'video/mp4') {
         $source_url = '/islandora/object/' . $object->id . '/datastream/OBJ';
         $mime = $object['OBJ']->mimetype;
