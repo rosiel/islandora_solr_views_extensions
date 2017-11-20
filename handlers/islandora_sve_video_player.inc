@@ -55,7 +55,7 @@ class IslandoraEthnographyHandlerVideoPlayer extends views_handler_field {
       );
     }
     if ($object['OBJ']) {
-      if ($object['OBJ']->mimetype == 'video/mpeg' || $object['OBJ']->mimetype == 'video/mp4') {
+      if (in_array($object['OBJ']->mimetype, array('video/mpeg', 'video/mp4'))) {
         $source_url = '/islandora/object/' . $object->id . '/datastream/OBJ';
         $mime = $object['OBJ']->mimetype;
         $vars['items'][] = array(
